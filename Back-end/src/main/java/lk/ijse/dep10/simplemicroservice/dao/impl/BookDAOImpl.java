@@ -29,7 +29,7 @@ public class BookDAOImpl implements BookDAO {
     }
 
     @Override
-    public Integer save(Book book) {
+    public String  save(Book book) {
 
         jdbcTemplate.update(con -> {
             PreparedStatement stm = con.prepareStatement
@@ -40,7 +40,7 @@ public class BookDAOImpl implements BookDAO {
             return stm;
         });
 
-        return null;
+        return book.getIsbn();
     };
 
     @Transactional(propagation = Propagation.NESTED)

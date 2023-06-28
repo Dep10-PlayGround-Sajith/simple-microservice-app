@@ -2,6 +2,7 @@ package lk.ijse.dep10.simplemicroservice.api;
 
 import lk.ijse.dep10.simplemicroservice.entity.Book;
 import lk.ijse.dep10.simplemicroservice.service.BookService;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,7 +24,7 @@ public class BookHTTPController {
     }
 
     @PostMapping
-    public Book saveBook(@RequestBody Book book) throws InterruptedException {
+    public Book saveBook(@RequestBody @Validated Book book) throws InterruptedException {
         return bookService.saveBook(book);
     }
 }

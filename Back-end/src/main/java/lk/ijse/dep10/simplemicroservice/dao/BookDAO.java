@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface BookDAO {
     List<Book> findAll();
-    Integer save(Book book);
+    String  save(Book book);
 
     void doSomething();
 
