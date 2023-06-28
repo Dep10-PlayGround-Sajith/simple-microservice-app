@@ -1,0 +1,25 @@
+*{
+  box-sizing: border-box;
+}
+#tbl-book th:first-child,
+#tbl-book td:first-child,{
+  width: 200px;
+}
+
+#tbl-book th:nth-child(2),
+#tbl-book td:nth-child(2),{
+  min-width: 200px;
+}
+
+#tbl-book th:nth-child(3),
+#tbl-book td:nth-child(3),{
+  width: 30px;
+}
+
+#edit:hover {
+  color: green;
+}
+
+#delete:hover{
+  color: red;
+}
